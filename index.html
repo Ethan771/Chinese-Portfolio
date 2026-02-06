@@ -456,10 +456,6 @@
         </div>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="fixed bottom-2 right-4 text-white font-body text-sm opacity-80 pointer-events-none">
-        按 'E' 键交互 (Press E)
-    </footer>
 
     <!-- MODAL (Letter Style) -->
     <div id="modal" class="fixed inset-0 z-50 modal-overlay hidden items-center justify-center p-4">
@@ -467,8 +463,9 @@
             <!-- Paper Background & Border -->
             <div class="border-8 border-white p-1 shadow-lg h-full">
                 <div class="border-2 border-gray-300 p-6 md:p-8 h-full relative">
-                    <!-- Close Button (Red X) -->
-                    <button onclick="closeModal()" class="absolute -top-6 -right-6 bg-red-500 text-white w-10 h-10 rounded-full font-header border-4 border-white shadow-lg hover:bg-red-600 transition">X</button>
+                    <!-- Close Button (Red X) --><button onclick="closeModal()" class="absolute -top-4 -right-4 bg-red-500 text-white w-14 h-14 rounded-full font-bold text-2xl border-4 border-white shadow-xl hover:bg-red-600 transition flex items-center justify-center">
+    ×
+</button>
 
                     <h2 id="modal-title" class="font-body font-bold text-xl md:text-2xl text-center text-sv-wood-dark mb-4 border-b-2 border-gray-300 pb-2">
                         任务详情
@@ -513,9 +510,7 @@
                         </div>
                     </div>
 
-                    <div class="mt-8 text-center font-body text-sm text-gray-400">
-                        - 镇长刘易斯 (Mayor Lewis)
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -644,4 +639,5 @@
         }
     </script>
 </body>
+
 </html>
