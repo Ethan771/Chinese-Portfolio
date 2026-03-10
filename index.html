@@ -185,12 +185,10 @@
         <!-- Date Box -->
         <div
             class="bg-gradient-to-b from-blue-400 to-blue-600 border-4 border-white rounded-lg p-2 shadow-lg w-32 text-center transform rotate-1">
-            <div class="font-header text-xs text-white drop-shadow-md tracking-wider">
-                FRI. 21
+            <div id="hud-date" class="font-header text-xs text-white drop-shadow-md tracking-wider">
             </div>
             <div class="bg-white/20 h-0.5 my-1"></div>
-            <div class="font-body text-xl text-white font-bold leading-none">
-                <i class="fas fa-sun text-yellow-300 animate-spin-slow"></i> 10:30 am
+            <div id="hud-time" class="font-body text-xl text-white font-bold leading-none">
             </div>
         </div>
         <!-- Gold Box -->
@@ -834,6 +832,37 @@
             document.getElementById('modal').classList.remove('flex');
             document.getElementById('modal-video-container').innerHTML = '';
         }
+        function updateClock() {
+
+            const now = new Date();
+
+            const days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+
+            const day = days[now.getDay()];
+            const date = now.getDate();
+
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+
+            const ampm = hours >= 12 ? "pm" : "am";
+
+            const icon = (hours >= 6 && hours < 18)
+                ? '<i class="fas fa-sun text-yellow-300"></i>'
+                : '<i class="fas fa-moon text-blue-200"></i>';
+
+            hours = hours % 12;
+            hours = hours ? hours : 12;
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+
+            document.getElementById("hud-date").innerText = `${day}. ${date}`;
+
+            document.getElementById("hud-time").innerHTML =
+                `${icon} ${hours}:${minutes} ${ampm}`;
+        }
+
+        updateClock();
+        setInterval(updateClock, 1000);
     </script>
 </body>
 
