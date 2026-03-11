@@ -719,7 +719,7 @@
             'feeling': {
                 title: "生成式 AI 3D 叙事平台",
                 desc: "挑战：如何将静态的生成式 AI 资产转化为可玩的动态游戏世界？ 方案：我开发了一套完整的管线，包括运行时相机切换状态机、类蜘蛛侠的物理摆荡移动机制，以及 Blender 到 Unreal 的自动导入工具。",
-                video: "vhyPSx4BqkI",
+                video: "UE5生成式AI场景demo.mp4",
                 role: "技术关卡设计师",
                 time: "2025",
                 team: "AI团队"
@@ -728,7 +728,7 @@
             'horror': {
                 title: "恐怖解谜游戏 Demo",
                 desc: "将《第8出口》的异常试错循环与《后窗》的窥视镜头结合在了一起，让玩家像《后窗》的主角一样去仔细观察对面大楼里人物的移动状态。在解谜与恐怖机制上，借鉴了《第8出口》的核心循环：玩家需要死记硬背初始房间的默认状态，然后在接下来的12个房间里不断进行判断。",
-                video: "WeIeb1dJbkM",
+                video: "恐怖解谜demo.mp4",
                 role: "独立开发",
                 time: "2024",
                 team: "个人项目"
@@ -737,7 +737,7 @@
             'camera': {
                 title: "拍立得相机 Demo",
                 desc: "挑战：在游戏内实现功能完整的拍照系统。 方案：使用 Scene Capture Component 2D 将当前画面捕捉为纹理，并保存到游戏内的相册 UI 中。",
-                video: "4GnjYuAW4Eg",
+                video: "拍立得相机demo.mp4",
                 role: "关卡策划",
                 time: "2024",
                 team: "个人项目"
@@ -746,7 +746,7 @@
             'vrfarm': {
                 title: "VR 农场 Demo",
                 desc: "Unity VR 种田Demo，使用Meta Building Blocks使玩家可以播种、浇水并收获作物。",
-                video: "QSbxfrVG3bY",
+                video: "VR farm demo.mp4",
                 role: "Unity开发",
                 time: "2025.10",
                 team: "个人项目"
@@ -755,7 +755,7 @@
             'kite': {
                 title: "横版风筝游戏音乐",
                 desc: "使用Logic Pro，为2D横版风筝游戏制作8bit风格配乐。",
-                video: "SK2LQfEj30c",
+                video: "游戏音乐.mp4",
                 role: "游戏音乐",
                 time: "2025.11",
                 team: "团队项目"
@@ -765,7 +765,7 @@
                 title: "黑暗世界：因与果 游戏拆解",
                 desc: "对反乌托邦恐怖剧情游戏的游戏关卡与叙事结构进行系统拆解分析。",
                 video: null,
-                doc: "https://tinyurl.com/muz7zxak",
+                doc: "https://pan.quark.cn/s/26fc8dcef8e1",
                 role: "关卡分析",
                 time: "2026",
                 team: "个人研究"
@@ -774,7 +774,7 @@
             'viewfinder': {
                 title: "视觉错位解谜",
                 desc: "挑战：复刻经典游戏 Viewfinder 的“照片变现实”机制。 方案：利用 Render Target 和动态网格生成技术，将 2D 图像无缝投射并实例化为 3D 碰撞体。",
-                video: "nNR6k_Epktg",
+                video: "取景器demo.mp4",
                 role: "玩法程序",
                 time: "2024",
                 team: "个人项目"
@@ -783,7 +783,7 @@
             'rewind': {
                 title: "时间回溯机制",
                 desc: "挑战：如何在实现物体倒着走的效果？ 方案：将物体倒着走的轨迹记录下来，用倒放的动画代替原有的正常动画。",
-                video: "IN57__h2a70",
+                video: "Time Rewind Demo.mp4",
                 role: "玩法程序",
                 time: "2024",
                 team: "个人项目"
@@ -818,11 +818,12 @@
 
             if (data.video) {
                 videoContainer.classList.remove('hidden');
-                // Simplified embed code for better compatibility
-                videoContainer.innerHTML = `<iframe class="w-full h-full" src="https://www.youtube.com/embed/${data.video}?autoplay=0&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-            } else {
-                videoContainer.classList.add('hidden');
-                videoContainer.innerHTML = '';
+
+                videoContainer.innerHTML = `
+                    <video controls autoplay class="w-full h-full rounded">
+                        <source src="${data.video}" type="video/mp4">
+                    </video>
+                    `;
             }
 
             const btnWeb = document.getElementById('btn-web');
@@ -902,3 +903,4 @@
 
 
 </html>
+
