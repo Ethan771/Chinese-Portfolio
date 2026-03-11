@@ -207,7 +207,7 @@
                 <i class="fas fa-user"></i> 档案 (Profile)
             </button>
             <button onclick="switchTab('quests')" id="tab-quests" class="nav-tab">
-                <i class="fas fa-exclamation-circle"></i> 任务板 (Quests)
+                <i class="fas fa-exclamation-circle"></i> 作品集
             </button>
             <button onclick="switchTab('skills')" id="tab-skills" class="nav-tab">
                 <i class="fas fa-hammer"></i> 技能 (Skills)
@@ -287,9 +287,9 @@
                                 class="bg-sv-blue text-white font-body font-bold text-sm px-6 py-3 border-b-4 border-blue-800 hover:border-b-0 hover:translate-y-1 transition rounded shadow-lg">
                                 <i class="fas fa-envelope"></i> 发送邮件
                             </a>
-                            <button onclick="switchTab('quests')"
+                            <button onclick="window.open('https://pan.quark.cn/s/602d57c2b419','_blank')"
                                 class="bg-sv-green text-white font-body font-bold text-sm px-6 py-3 border-b-4 border-green-800 hover:border-b-0 hover:translate-y-1 transition rounded shadow-lg">
-                                <i class="fas fa-map"></i> 查看任务板
+                                <i class="fas fa-map"></i> 查看作品集文件
                             </button>
                         </div>
                     </div>
@@ -299,7 +299,7 @@
                 <section id="content-quests" class="hidden animate-fade-in">
                     <h2
                         class="font-body font-bold text-2xl text-center text-sv-wood-dark mb-8 underline decoration-wavy decoration-sv-gold">
-                        特别任务公告板
+                        作品集
                     </h2>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -899,5 +899,6 @@
         setInterval(updateClock, 1000);
     </script>
 </body>
+
 
 </html>
