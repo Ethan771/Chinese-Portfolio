@@ -719,7 +719,7 @@
             'feeling': {
                 title: "生成式 AI 3D 叙事平台",
                 desc: "挑战：如何将静态的生成式 AI 资产转化为可玩的动态游戏世界？ 方案：我开发了一套完整的管线，包括运行时相机切换状态机、类蜘蛛侠的物理摆荡移动机制，以及 Blender 到 Unreal 的自动导入工具。",
-                video: "UE5生成式AI场景demo.mp4",
+                video: "UE5生产式AI场景demo.mp4",
                 role: "技术关卡设计师",
                 time: "2025",
                 team: "AI团队"
@@ -824,6 +824,10 @@
                         <source src="${data.video}" type="video/mp4">
                     </video>
                     `;
+            } else {
+
+                videoContainer.classList.add('hidden');
+                videoContainer.innerHTML = '';
             }
 
             const btnWeb = document.getElementById('btn-web');
@@ -903,4 +907,5 @@
 
 
 </html>
+
 
