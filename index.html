@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>张易腾的冒险日志 | 技术关卡策划</title>
+    <title>张易腾的冒险日志 | 游戏 AI 工程师</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -275,10 +275,11 @@
                                 <i class="fas fa-book"></i> 当前状态 (Current Status)
                             </h3>
                             <p class="font-body text-lg text-sv-border leading-relaxed">
-                                我是一名 <strong>技术关卡设计师 (Technical Game Designer)</strong>，目前在 <strong>密歇根大学
-                                    (UMich)</strong> 学习开发与设计。
-                                我专注于 <span class="text-sv-blue font-bold">Unreal Engine 5 & Unity</span> 的机制开发，正努力将
-                                <span class="text-purple-600 font-bold">生成式 AI</span> 真正融入动态的游戏世界中。
+                                我是一名专注 <strong>游戏 AI 应用</strong> 的开发者，目前在 <strong>密歇根大学
+                                    (UMich)</strong> 攻读信息科学硕士（软件开发方向）。
+                                此前在 <strong>腾讯 IEG 体育产品部算法组</strong> 实习，负责 NBA 2K <span class="text-sv-blue font-bold">AI 解说系统</span>、语音克隆
+                                TTS、语音驱动面部动画与 <span class="text-purple-600 font-bold">3D 场景生成智能体</span>。
+                                我相信 <span class="text-purple-600 font-bold">AI 原生玩法</span> 是下一代游戏的核心。
                             </p>
                         </div>
 
@@ -303,6 +304,90 @@
                     </h2>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                        <!-- 0.1 Tencent NBA AI Commentary -->
+                        <div onclick="openModal('tencent-nba')"
+                            class="bg-white p-3 border-2 border-sv-wood-light relative shadow-lg transform -rotate-1 hover:rotate-0 transition cursor-pointer group hover:scale-105">
+                            <div
+                                class="absolute -top-3 left-1/2 -translate-x-1/2 bg-red-500 text-white font-body font-bold text-[10px] px-2 py-1 shadow border border-red-700">
+                                ! 腾讯 IEG 实习
+                            </div>
+                            <div
+                                class="h-32 bg-gray-800 mb-3 border-2 border-gray-300 flex items-center justify-center">
+                                <i class="fas fa-basketball-ball text-5xl text-orange-400 group-hover:scale-110 transition"></i>
+                            </div>
+                            <h3 class="font-body font-bold text-md text-sv-wood-dark mb-2 h-8">NBA 2K AI 中文解说系统</h3>
+                            <p class="font-body text-sm text-gray-600 leading-normal mb-3">
+                                端到端 AI 解说全链路：数据集管线、双解说 LLM Prompt Chain、语音克隆 TTS。
+                            </p>
+                            <div
+                                class="flex justify-between items-center border-t-2 border-dashed border-gray-300 pt-2">
+                                <span class="font-header text-[10px] text-red-600">REWARD: VOICE</span>
+                            </div>
+                        </div>
+
+                        <!-- 0.2 Tencent Audio2Face -->
+                        <div onclick="openModal('tencent-a2f')"
+                            class="bg-white p-3 border-2 border-sv-wood-light relative shadow-lg transform rotate-1 hover:rotate-0 transition cursor-pointer group hover:scale-105">
+                            <div
+                                class="absolute -top-3 left-1/2 -translate-x-1/2 bg-red-500 text-white font-body font-bold text-[10px] px-2 py-1 shadow border border-red-700">
+                                ! 腾讯 IEG 实习
+                            </div>
+                            <div
+                                class="h-32 bg-gray-800 mb-3 border-2 border-gray-300 flex items-center justify-center">
+                                <i class="fas fa-face-smile text-5xl text-yellow-400 group-hover:scale-110 transition"></i>
+                            </div>
+                            <h3 class="font-body font-bold text-md text-sv-wood-dark mb-2 h-8">语音驱动面部动画</h3>
+                            <p class="font-body text-sm text-gray-600 leading-normal mb-3">
+                                Audio2Face + MetaHuman 在 UE5 实现说话表情驱动与前沿技术调研。
+                            </p>
+                            <div
+                                class="flex justify-between items-center border-t-2 border-dashed border-gray-300 pt-2">
+                                <span class="font-header text-[10px] text-orange-600">REWARD: FACE</span>
+                            </div>
+                        </div>
+
+                        <!-- 0.3 Tencent Hunyuan 3D Agent -->
+                        <div onclick="openModal('tencent-hunyuan')"
+                            class="bg-white p-3 border-2 border-sv-wood-light relative shadow-lg transform rotate-2 hover:rotate-0 transition cursor-pointer group hover:scale-105">
+                            <div
+                                class="absolute -top-3 left-1/2 -translate-x-1/2 bg-red-500 text-white font-body font-bold text-[10px] px-2 py-1 shadow border border-red-700">
+                                ! 腾讯 IEG 实习
+                            </div>
+                            <div
+                                class="h-32 bg-gray-800 mb-3 border-2 border-gray-300 flex items-center justify-center">
+                                <i class="fas fa-robot text-5xl text-blue-400 group-hover:scale-110 transition"></i>
+                            </div>
+                            <h3 class="font-body font-bold text-md text-sv-wood-dark mb-2 h-8">混元 3D 场景生成 Agent</h3>
+                            <p class="font-body text-sm text-gray-600 leading-normal mb-3">
+                                对话式 3D 场景生成与编辑，开发 Unity 插件打通文本到场景管线。
+                            </p>
+                            <div
+                                class="flex justify-between items-center border-t-2 border-dashed border-gray-300 pt-2">
+                                <span class="font-header text-[10px] text-blue-600">REWARD: AGENT</span>
+                            </div>
+                        </div>
+
+                        <!-- 0.4 UMich Social VR Research -->
+                        <div onclick="openModal('umich-vr')"
+                            class="bg-white p-3 border-2 border-sv-wood-light relative shadow-lg transform -rotate-2 hover:rotate-0 transition cursor-pointer group hover:scale-105">
+                            <div
+                                class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white font-body font-bold text-[10px] px-2 py-1 shadow border border-purple-700">
+                                ! UMich 研究助理
+                            </div>
+                            <div
+                                class="h-32 bg-gray-800 mb-3 border-2 border-gray-300 flex items-center justify-center">
+                                <i class="fas fa-vr-cardboard text-5xl text-blue-300 group-hover:scale-110 transition"></i>
+                            </div>
+                            <h3 class="font-body font-bold text-md text-sv-wood-dark mb-2 h-8">Accessibility & Social VR 研究</h3>
+                            <p class="font-body text-sm text-gray-600 leading-normal mb-3">
+                                研究听障人群在社交 VR 中的交流偏好，用 Unity 开发 VR 实验 Demo。
+                            </p>
+                            <div
+                                class="flex justify-between items-center border-t-2 border-dashed border-gray-300 pt-2">
+                                <span class="font-header text-[10px] text-sv-blue">REWARD: INSIGHT</span>
+                            </div>
+                        </div>
 
                         <!-- 1. Generative Scene -->
                         <div onclick="openModal('feeling')"
@@ -591,11 +676,11 @@
                             <div class="absolute bottom-1 right-1 font-header text-xs font-bold text-black">80</div>
                         </div>
 
-                        <!-- 10. Excel -->
+                        <!-- 10. Game AI -->
                         <div
                             class="bg-white aspect-square border-2 border-gray-400 shadow-inner flex flex-col items-center justify-center hover:bg-green-50 transition cursor-help relative group">
-                            <i class="fas fa-file-excel text-3xl text-green-600 mb-1"></i>
-                            <span class="font-header text-[8px] text-gray-500 mt-1">Excel</span>
+                            <i class="fas fa-robot text-3xl text-green-600 mb-1"></i>
+                            <span class="font-header text-[8px] text-gray-500 mt-1">AI</span>
                             <div class="absolute bottom-1 right-1 font-header text-xs font-bold text-black">95</div>
                         </div>
 
@@ -604,7 +689,7 @@
 
                 <div class="mt-8 p-6 bg-orange-50 border-2 border-orange-200 rounded-lg text-center">
                     <h3 class="font-body font-bold text-sm text-sv-wood-dark mb-2">其他技能 (Other)</h3>
-                    <p class="font-body text-lg text-sv-border">AR/VR 开发, 数据可视化, 游戏音乐</p>
+                    <p class="font-body text-lg text-sv-border">GPT-SoVITS 语音克隆, WhisperX, NVIDIA Audio2Face, 腾讯混元 3D, vLLM / DeepSeek, AR/VR 开发, 游戏音乐</p>
 
                 </div>
             </section>
@@ -690,7 +775,7 @@
     <!-- Scripting -->
     <script>
         // Typing Effect
-        const introText = "我希望将 AI 技术与核心游戏玩法结合起来，去创造充满无限可能的虚拟世界。";
+        const introText = "我在探索 AI 原生游戏的边界——让语音、生成式 AI 与核心玩法真正融合。";
         let i = 0;
         const typeTarget = document.getElementById('typing-text');
 
@@ -715,6 +800,42 @@
 
         // Project Data (Translated from CV)
         const questData = {
+
+            'tencent-nba': {
+                title: "NBA 2K AI 中文解说系统",
+                desc: "在腾讯 IEG 体育产品部算法组，负责《美职篮全明星》（手游）与《NBA 2K Online 2/3》（端游）的 AI 解说算法工作。搭建解说数据集管线：从 NBA 视频经降噪、说话人分离（DiarZen）、语音分离（MossFormer2）、目标说话人提取到 ASR（WhisperX）构建标注数据，针对中英文解说分别搭建两套系统；设计「赛前知识库自动准备 → 结构化/累积比赛数据 → 防幻觉校验 → 双解说大模型 Prompt Chain（play-by-play + 评论）→ TTS」全链路，支持离线生成与实时低延迟解说（本地 vLLM / 腾讯 Venus / DeepSeek）；并基于 GPT-SoVITS 迭代训练新增中文解说语音角色。",
+                video: null,
+                role: "算法实习生",
+                time: "2026.04 - 2026.09",
+                team: "腾讯 IEG 体育产品部"
+            },
+
+            'tencent-a2f': {
+                title: "语音驱动面部动画（Audio2Face × MetaHuman）",
+                desc: "基于 NVIDIA Audio2Face + MetaHuman 在 UE5 实现说话表情驱动（口型同步 lip-sync / BlendShape 表情），并系统调研音频驱动动画前沿：端到端唇形同步（Wav2Lip 类）、扩散模型表情生成、音频驱动 3D 面部（NeRF / 隐式表示）及角色动画表示（SMPL / FLAME），结合 MOS / WER 评估自然度与准确度。",
+                video: null,
+                role: "算法实习生",
+                time: "2026.04 - 2026.09",
+                team: "腾讯 IEG 体育产品部"
+            },
+
+            'tencent-hunyuan': {
+                title: "混元 3D 场景生成智能体",
+                desc: "基于腾讯混元 3D 开发 3D 生成智能体，支持对话式生成与修改场景摆放 / 物体；开发 Unity 插件，将生成结果直接在 Unity 内对话式编辑，打通「文本 → 场景」管线，提升美术资产更新效率；并在 Unity / VR 中实现高精度可交互室内场景生成 Demo。",
+                video: null,
+                role: "算法实习生",
+                time: "2026.04 - 2026.09",
+                team: "腾讯 IEG 体育产品部"
+            },
+
+            'umich-vr': {
+                title: "Accessibility & Social VR 研究",
+                desc: "在密歇根大学 Dhruv \"DJ\" Jain 教授实验室担任研究助理，研究听障人群（deaf / hard-of-hearing）在 Social VR 中的交流偏好（手语 vs 字幕），探索提升沉浸式社交体验的辅助功能设计。负责拆解研究维度、设计实验方案，在 VRChat 类平台招募听障参与者并组织可用性测试；基于 Unity 开发 VR 实验 Demo，复现类 VRChat 场景，实时呈现对话文字、手势、距离、音量、对话对象与私密频道等状态。论文预计 2026 下半年发表。",
+                video: null,
+                role: "研究助理",
+                time: "2025.09 - 至今",
+                team: "UMich Jain Lab"
+            },
 
             'feeling': {
                 title: "生成式 AI 3D 叙事平台",
