@@ -212,7 +212,7 @@
             <button onclick="switchTab('skills')" id="tab-skills" class="nav-tab">
                 <i class="fas fa-hammer"></i> 技能 (Skills)
             </button>
-            <a href="张易腾简历.pdf" download class="nav-tab bg-red-500 hover:bg-red-400">
+            <a href="张易腾_简历.pdf" download class="nav-tab bg-red-500 hover:bg-red-400">
                 <i class="fas fa-file-alt"></i> 下载简历 (Resume)
             </a>
         </div>
@@ -313,12 +313,14 @@
                                 ! 腾讯 IEG 实习
                             </div>
                             <div
-                                class="h-32 bg-gray-800 mb-3 border-2 border-gray-300 flex items-center justify-center">
-                                <i class="fas fa-basketball-ball text-5xl text-orange-400 group-hover:scale-110 transition"></i>
+                                class="h-32 bg-gray-800 mb-3 border-2 border-gray-300 flex items-center justify-center overflow-hidden relative">
+                                <img src="https://img.youtube.com/vi/zkcLfXJA784/0.jpg"
+                                    class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition">
+                                <i class="fas fa-play-circle text-4xl text-white absolute z-10"></i>
                             </div>
                             <h3 class="font-body font-bold text-md text-sv-wood-dark mb-2 h-8">NBA 2K AI 中文解说系统</h3>
                             <p class="font-body text-sm text-gray-600 leading-normal mb-3">
-                                端到端 AI 解说全链路：数据集管线、双解说 LLM Prompt Chain、语音克隆 TTS。
+                                端到端 AI 解说全链路：数据管线、双解说 LLM 链路、语音克隆 TTS。
                             </p>
                             <div
                                 class="flex justify-between items-center border-t-2 border-dashed border-gray-300 pt-2">
@@ -355,12 +357,14 @@
                                 ! 腾讯 IEG 实习
                             </div>
                             <div
-                                class="h-32 bg-gray-800 mb-3 border-2 border-gray-300 flex items-center justify-center">
-                                <i class="fas fa-robot text-5xl text-blue-400 group-hover:scale-110 transition"></i>
+                                class="h-32 bg-gray-800 mb-3 border-2 border-gray-300 flex items-center justify-center overflow-hidden relative">
+                                <img src="https://img.youtube.com/vi/lCjobnUHOv0/0.jpg"
+                                    class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition">
+                                <i class="fas fa-play-circle text-4xl text-white absolute z-10"></i>
                             </div>
-                            <h3 class="font-body font-bold text-md text-sv-wood-dark mb-2 h-8">混元 3D 场景生成 Agent</h3>
+                            <h3 class="font-body font-bold text-md text-sv-wood-dark mb-2 h-8">Unity 3D 场景生成插件</h3>
                             <p class="font-body text-sm text-gray-600 leading-normal mb-3">
-                                对话式 3D 场景生成与编辑，开发 Unity 插件打通文本到场景管线。
+                                对话式 3D 场景生成与编辑，Unity 插件打通文本/图片到场景双管线。
                             </p>
                             <div
                                 class="flex justify-between items-center border-t-2 border-dashed border-gray-300 pt-2">
@@ -386,6 +390,27 @@
                             <div
                                 class="flex justify-between items-center border-t-2 border-dashed border-gray-300 pt-2">
                                 <span class="font-header text-[10px] text-sv-blue">REWARD: INSIGHT</span>
+                            </div>
+                        </div>
+
+                        <!-- 0.5 NBA Card Auction Game -->
+                        <div onclick="openModal('nbacard')"
+                            class="bg-white p-3 border-2 border-sv-wood-light relative shadow-lg transform rotate-1 hover:rotate-0 transition cursor-pointer group hover:scale-105">
+                            <div
+                                class="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-500 text-white font-body font-bold text-[10px] px-2 py-1 shadow border border-purple-700">
+                                Three.js 个人项目
+                            </div>
+                            <div
+                                class="h-32 bg-gray-800 mb-3 border-2 border-gray-300 flex items-center justify-center">
+                                <i class="fas fa-id-card text-5xl text-orange-300 group-hover:scale-110 transition"></i>
+                            </div>
+                            <h3 class="font-body font-bold text-md text-sv-wood-dark mb-2 h-8">篮球球星卡拍卖游戏</h3>
+                            <p class="font-body text-sm text-gray-600 leading-normal mb-3">
+                                借鉴《竞拍之王》机制：稀有度分层、价值波动与心理博弈。
+                            </p>
+                            <div
+                                class="flex justify-between items-center border-t-2 border-dashed border-gray-300 pt-2">
+                                <span class="font-header text-[10px] text-orange-600">REWARD: BID</span>
                             </div>
                         </div>
 
@@ -689,7 +714,7 @@
 
                 <div class="mt-8 p-6 bg-orange-50 border-2 border-orange-200 rounded-lg text-center">
                     <h3 class="font-body font-bold text-sm text-sv-wood-dark mb-2">其他技能 (Other)</h3>
-                    <p class="font-body text-lg text-sv-border">GPT-SoVITS 语音克隆, WhisperX, NVIDIA Audio2Face, 腾讯混元 3D, vLLM / DeepSeek, AR/VR 开发, 游戏音乐</p>
+                    <p class="font-body text-lg text-sv-border">GPT-SoVITS, WhisperX, DiarZen, MossFormer2, NVIDIA Audio2Face, MetaHuman, 腾讯混元 3D, vLLM / DeepSeek, PyTorch, AR/VR 开发, 游戏音乐</p>
 
                 </div>
             </section>
@@ -803,8 +828,8 @@
 
             'tencent-nba': {
                 title: "NBA 2K AI 中文解说系统",
-                desc: "在腾讯 IEG 体育产品部算法组，负责《美职篮全明星》（手游）与《NBA 2K Online 2/3》（端游）的 AI 解说算法工作。搭建解说数据集管线：从 NBA 视频经降噪、说话人分离（DiarZen）、语音分离（MossFormer2）、目标说话人提取到 ASR（WhisperX）构建标注数据，针对中英文解说分别搭建两套系统；设计「赛前知识库自动准备 → 结构化/累积比赛数据 → 防幻觉校验 → 双解说大模型 Prompt Chain（play-by-play + 评论）→ TTS」全链路，支持离线生成与实时低延迟解说（本地 vLLM / 腾讯 Venus / DeepSeek）；并基于 GPT-SoVITS 迭代训练新增中文解说语音角色。",
-                video: null,
+                desc: "在腾讯 IEG 体育产品部算法组（手游《美职篮全明星》· 端游《NBA 2K Online 2》）：搭建「赛前知识库 → 结构化比赛数据 → 防幻觉校验 → 双解说大模型链路（play-by-play + 评论）→ TTS」全链路闭环，离线用本地 vLLM、实时用 DeepSeek-v4 Pro 实现低于 2s 延迟的流式解说，解决中英双语对齐、事件聚合成语义回合等核心难题；基于 GPT-SoVITS 迭代训练 5+ 中文解说声色，完成 200+ 小时语音数据标注，解说自然度 MOS 达 3.8+（5 分制）；从 NBA 比赛视频经降噪 → 说话人分离（DiarZen，DER < 15%）→ 语音分离（MossFormer2）→ 目标说话人提取（ClearVoice）→ ASR（WhisperX）构建标注数据集，针对中英声学差异分别搭建两套独立系统。",
+                video: "zkcLfXJA784",
                 role: "算法实习生",
                 time: "2026.04 - 2026.09",
                 team: "腾讯 IEG 体育产品部"
@@ -812,7 +837,7 @@
 
             'tencent-a2f': {
                 title: "语音驱动面部动画（Audio2Face × MetaHuman）",
-                desc: "基于 NVIDIA Audio2Face + MetaHuman 在 UE5 实现说话表情驱动（口型同步 lip-sync / BlendShape 表情），并系统调研音频驱动动画前沿：端到端唇形同步（Wav2Lip 类）、扩散模型表情生成、音频驱动 3D 面部（NeRF / 隐式表示）及角色动画表示（SMPL / FLAME），结合 MOS / WER 评估自然度与准确度。",
+                desc: "基于 Viseme + BlendShape 映射，使用 NVIDIA Audio2Face + MetaHuman 在 UE5 将音频实时映射为口型与表情，跑通虚拟角色「听音驱动」的实时面部动画管线，实现 30fps 实时渲染；并系统调研音频驱动动画前沿：端到端唇形同步（Wav2Lip 类）、扩散模型表情生成、音频驱动 3D 面部（NeRF / 隐式表示）及角色动画表示（SMPL / FLAME），结合 MOS / WER 评估自然度与准确度。",
                 video: null,
                 role: "算法实习生",
                 time: "2026.04 - 2026.09",
@@ -820,9 +845,9 @@
             },
 
             'tencent-hunyuan': {
-                title: "混元 3D 场景生成智能体",
-                desc: "基于腾讯混元 3D 开发 3D 生成智能体，支持对话式生成与修改场景摆放 / 物体；开发 Unity 插件，将生成结果直接在 Unity 内对话式编辑，打通「文本 → 场景」管线，提升美术资产更新效率；并在 Unity / VR 中实现高精度可交互室内场景生成 Demo。",
-                video: null,
+                title: "Unity 3D 场景生成插件",
+                desc: "基于腾讯混元 3D 实现对话式场景生成与修改，开发 Unity 插件支持美术在引擎内直接对话式编辑；跑通「文本 → 场景」与「图片 → 场景」双管线，将美术资产迭代效率提升 60%+；并在 Unity / VR 中实现高精度可交互室内场景生成 Demo。",
+                video: "lCjobnUHOv0",
                 role: "算法实习生",
                 time: "2026.04 - 2026.09",
                 team: "腾讯 IEG 体育产品部"
@@ -830,18 +855,28 @@
 
             'umich-vr': {
                 title: "Accessibility & Social VR 研究",
-                desc: "在密歇根大学 Dhruv \"DJ\" Jain 教授实验室担任研究助理，研究听障人群（deaf / hard-of-hearing）在 Social VR 中的交流偏好（手语 vs 字幕），探索提升沉浸式社交体验的辅助功能设计。负责拆解研究维度、设计实验方案，在 VRChat 类平台招募听障参与者并组织可用性测试；基于 Unity 开发 VR 实验 Demo，复现类 VRChat 场景，实时呈现对话文字、手势、距离、音量、对话对象与私密频道等状态。论文预计 2026 下半年发表。",
+                desc: "在密歇根大学 Dhruv \"DJ\" Jain 教授实验室担任研究助理，研究听障人群（deaf / hard-of-hearing）在 Social VR 中的交流偏好（手语 vs 字幕），探索提升沉浸式社交体验的辅助功能设计。负责拆解研究维度、设计实验方案，在类 VRChat 平台招募 10+ 听障参与者进行可用性测试；基于 Unity 开发 VR 实验 Demo，实时呈现对话文字、手势、距离、音量、对话对象与内容私密性等状态。论文撰写中。",
                 video: null,
                 role: "研究助理",
                 time: "2025.09 - 至今",
                 team: "UMich Jain Lab"
             },
 
+            'nbacard': {
+                title: "篮球球星卡拍卖游戏",
+                desc: "借鉴《竞拍之王》（For Sale）拍卖机制，针对篮球球星卡重新设计估值与竞价系统：稀有度分层、球员价值随赛况波动、拍卖节奏与心理博弈。使用 Three.js 开发，支持 AI 对手竞拍。",
+                video: null,
+                code: "https://github.com/Ethan771/nbacardgame",
+                role: "独立开发",
+                time: "2026",
+                team: "个人项目"
+            },
+
             'feeling': {
                 title: "生成式 AI 3D 叙事平台",
                 desc: "挑战：如何将静态的生成式 AI 资产转化为可玩的动态游戏世界？ 方案：我开发了一套完整的管线，包括运行时相机切换状态机、类蜘蛛侠的物理摆荡移动机制，以及 Blender 到 Unreal 的自动导入工具。",
                 video: "vhyPSx4BqkI",
-                role: "技术关卡设计师",
+                role: "技术关卡策划（AI 产品经理）",
                 time: "2025",
                 team: "AI团队"
             },
