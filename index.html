@@ -320,7 +320,7 @@
                             </div>
                             <h3 class="font-body font-bold text-md text-sv-wood-dark mb-2 h-8">NBA 2K AI 中文解说系统</h3>
                             <p class="font-body text-sm text-gray-600 leading-normal mb-3">
-                                让 AI 像真人解说一样聊球：双解说搭档实时对话，还能克隆你喜欢的声音。
+                                AI 解说搭档实时解说 NBA 比赛，还能克隆你喜欢的声音。
                             </p>
                             <div
                                 class="flex justify-between items-center border-t-2 border-dashed border-gray-300 pt-2">
@@ -343,7 +343,7 @@
                             </div>
                             <h3 class="font-body font-bold text-md text-sv-wood-dark mb-2 h-8">不死鸟语音驱动面部动画</h3>
                             <p class="font-body text-sm text-gray-600 leading-normal mb-3">
-                                让无畏契约「不死鸟」开口说话：语音实时驱动口型与表情。
+                                让无畏契约的不死鸟开口说话，语音实时驱动口型和表情。
                             </p>
                             <div
                                 class="flex justify-between items-center border-t-2 border-dashed border-gray-300 pt-2">
@@ -389,7 +389,7 @@
                             </div>
                             <h3 class="font-body font-bold text-md text-sv-wood-dark mb-2 h-8">Accessibility & Social VR 研究</h3>
                             <p class="font-body text-sm text-gray-600 leading-normal mb-3">
-                                让听障玩家在 VR 社交中被「听见」：手语与字幕的偏好研究。
+                                研究听障玩家在 VR 社交中的交流方式，让他们真正被听见。
                             </p>
                             <div
                                 class="flex justify-between items-center border-t-2 border-dashed border-gray-300 pt-2">
@@ -413,7 +413,7 @@
                             </div>
                             <h3 class="font-body font-bold text-md text-sv-wood-dark mb-2 h-8">篮球球星卡拍卖游戏</h3>
                             <p class="font-body text-sm text-gray-600 leading-normal mb-3">
-                                和 AI 对手竞拍 NBA 球星卡：估价、抬价与心理博弈。
+                                和 AI 对手竞拍 NBA 球星卡，体验估价与心理博弈的乐趣。
                             </p>
                             <div
                                 class="flex justify-between items-center border-t-2 border-dashed border-gray-300 pt-2">
@@ -838,7 +838,7 @@
 
             'tencent-nba': {
                 title: "NBA 2K AI 中文解说系统",
-                desc: "在腾讯 IEG 体育产品部算法组（手游《美职篮全明星》· 端游《NBA 2K Online 2》）：搭建「赛前知识库 → 结构化比赛数据 → 防幻觉校验 → 双解说大模型链路（play-by-play + 评论）→ TTS」全链路闭环，离线用本地 vLLM、实时用 DeepSeek-v4 Pro 实现低于 2s 延迟的流式解说，解决中英双语对齐、事件聚合成语义回合等核心难题；基于 GPT-SoVITS 迭代训练 5+ 中文解说声色，完成 200+ 小时语音数据标注，解说自然度 MOS 达 3.8+（5 分制）；从 NBA 比赛视频经降噪 → 说话人分离（DiarZen，DER < 15%）→ 语音分离（MossFormer2）→ 目标说话人提取（ClearVoice）→ ASR（WhisperX）构建标注数据集，针对中英声学差异分别搭建两套独立系统。",
+                desc: "在腾讯 IEG 体育产品部算法组实习，为 NBA 2K 系列游戏研发 AI 解说。我搭建了从数据到发声的完整系统，先把 200 多小时的比赛录像清洗成标注数据集，再设计双解说大模型链路，一位负责实况播报，一位负责穿插点评，并用防幻觉校验保证比赛数据不出错。系统既能离线批量生成，也能以不到 2 秒的延迟实时解说。我还用语音克隆训练了 5 种以上解说音色，自然度 MOS 评分达到 3.8。",
                 video: "zkcLfXJA784",
                 role: "算法实习生",
                 time: "2026.04 - 2026.09",
@@ -847,7 +847,7 @@
 
             'tencent-a2f': {
                 title: "不死鸟（Phoenix）语音驱动 3D 面部动画",
-                desc: "无畏契约角色「不死鸟」的音频驱动 3D 面部动画 Demo：让游戏角色跟随语音输入实时产生口型与表情，分为模型准备、MetaHuman 映射、音频驱动三个阶段。模型准备：角色模型来自 GitHub 的无畏契约角色提取项目，经 Blender 格式清理与骨骼检查后导出 GLB 供 UE5.8 使用——原始模型是带骨骼蒙皮的 mesh，面部无 blendshape 也无 FACS rig，这正是核心挑战。MetaHuman 映射（核心工作，两套方案）：①头部映射 + MetaHuman 身体——将不死鸟头部与 MetaHuman template 头部空间对齐，用 MetaHuman Animator 面部投射把 blendshape 拓扑投射到不死鸟头部，针对头发、面罩等非皮肤区域的顶点错乱做手动权重微调与局部变形；②全身映射——头部同样投射，无头原始身体与 MetaHuman 骨架 retarget 后重新拼接头身，保证表情与肢体动作一致。音频驱动：音频输入 → UE5.8 音素 / viseme 分析 → MetaHuman blendshape 连续权重 → 投射到不死鸟面部 mesh → 实时渲染。通过唇音同步性、面部自然度、头身一致性做视觉评估。核心收获：工业级面部动画的瓶颈不在算法本身，而在「角色接入」——拓扑投射、权重微调与头身拼接才是生产中最耗时的工程工作。",
+                desc: "让无畏契约的角色不死鸟跟随语音实时做出口型和表情。这个模型原本没有任何面部绑定，这是最大的难点。我先把模型在 Blender 里清理好导入 UE5.8，再用 MetaHuman Animator 把标准面部拓扑投射到不死鸟的头上，头发和面罩这些区域的错位全靠手动调整权重一点点修复。身体做了两套方案，一套直接用 MetaHuman 的身体，开发快但角色辨识度低，另一套保留原始模型做骨骼重定向，还原度高但工程量大。这个项目让我体会到，角色面部动画最难的不是算法本身，而是把游戏资产接进管线的工程活。",
                 video: null,
                 role: "独立开发",
                 time: "2026",
@@ -856,7 +856,7 @@
 
             'tencent-hunyuan': {
                 title: "Unity 3D 场景生成插件",
-                desc: "基于腾讯混元 3D 实现对话式场景生成与修改，开发 Unity 插件支持美术在引擎内直接对话式编辑；跑通「文本 → 场景」与「图片 → 场景」双管线，将美术资产迭代效率提升 60%+；并在 Unity / VR 中实现高精度可交互室内场景生成 Demo。",
+                desc: "基于腾讯混元 3D 开发的对话式场景生成插件。在 Unity 里输入一句话就能生成完整的 3D 场景，不满意就继续用对话调整物体和摆放，全程不用手动拖资产。文字和图片都能作为输入，美术资产的迭代效率提升了 60% 以上。",
                 video: "lCjobnUHOv0",
                 role: "算法实习生",
                 time: "2026.04 - 2026.09",
@@ -865,7 +865,7 @@
 
             'umich-vr': {
                 title: "Accessibility & Social VR 研究",
-                desc: "在密歇根大学 Dhruv \"DJ\" Jain 教授实验室担任研究助理，研究听障人群（deaf / hard-of-hearing）在 Social VR 中的交流偏好（手语 vs 字幕），探索提升沉浸式社交体验的辅助功能设计。负责拆解研究维度、设计实验方案，在类 VRChat 平台招募 10+ 听障参与者进行可用性测试；基于 Unity 开发 VR 实验 Demo，实时呈现对话文字、手势、距离、音量、对话对象与内容私密性等状态。论文撰写中。",
+                desc: "在密歇根大学 Jain 教授实验室担任研究助理，研究听障玩家在 VR 社交中的交流方式。我用 Unity 复刻了一个类似 VRChat 的实验场景，把对话文字、手势、距离和音量实时呈现在画面里，并招募了十多位听障玩家做可用性测试，对比手语和字幕哪种方式更自然。论文撰写中。",
                 video: null,
                 role: "研究助理",
                 time: "2025.09 - 至今",
@@ -874,7 +874,7 @@
 
             'nbacard': {
                 title: "篮球球星卡拍卖游戏",
-                desc: "借鉴《竞拍之王》（For Sale）拍卖机制，针对篮球球星卡重新设计估值与竞价系统：稀有度分层、球员价值随赛况波动、拍卖节奏与心理博弈。使用 Three.js 开发，支持 AI 对手竞拍。",
+                desc: "以 NBA 球星卡为主题的在线拍卖游戏，机制参考了桌游竞拍之王。我用 Three.js 做了 3D 翻卡和拍卖现场的效果，玩家和四个性格迥异的 AI 对手同台竞价，要估算每张卡的真实价值，决定什么时候加价什么时候收手。稀有卡出现时 AI 会疯狂抬价，心理博弈直接拉满。",
                 video: null,
                 code: "https://github.com/Ethan771/nbacardgame",
                 web: "https://nbacard-auction.onrender.com/",
